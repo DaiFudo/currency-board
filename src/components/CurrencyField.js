@@ -1,16 +1,19 @@
 import { useList } from "effector-react"
 
-import { $currencyList } from 'features/currency'
+import { $currencyList, currencyDeleted } from 'features/currency'
 
 export const CurrencyField = () => {
 
-  const aList = useList($currencyList, (currency) => (
+  const aList = useList($currencyList, (currency, index) => (
     <div
       key={currency.label}
       className="h-16 flex items-center justify-between mt-4  px-5  rounded-lg bg-gray-400"
     >
       <p>{currency.currency}</p>
-      <p>{currency.value} zł</p>
+      <div className="flex">
+        <p className="mr-3">{currency.value} zł</p>
+        <button onClick={() => currencyDeleted(index)} className='px-3 bg-gray-500 rounded-lg'>Delete</button>
+      </div>
     </div>
   ))
 
