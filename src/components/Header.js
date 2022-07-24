@@ -7,7 +7,7 @@ import { confirmAlert } from 'react-confirm-alert'
 import { $currency, currencySelected, currencyAdded, currencyListReset } from 'features/currency'
 
 //import styles
-import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
+import 'react-confirm-alert/src/react-confirm-alert.css'
 
 export const Header = () => {
   const submit = () => {
