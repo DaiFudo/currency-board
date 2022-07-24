@@ -1,6 +1,3 @@
-//import modules 
-import React from 'react'
-
 //import components
 import { Home } from 'pages/Home'
 
